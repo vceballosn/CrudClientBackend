@@ -28,7 +28,7 @@ public class ClientServiceImp implements ClientServices  {
 	@Override
 	public Client add(Client client) {
 		// TODO Auto-generated method stub
-		return null;
+		return repository.save(client);
 	}
 
 	@Override
