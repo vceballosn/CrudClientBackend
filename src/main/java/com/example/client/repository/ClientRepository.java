@@ -9,7 +9,7 @@ import com.example.client.model.Client;
 public interface ClientRepository extends Repository<Client, Integer> {
 	
 	List<Client> findAll();
-	
+	Client findById(int id);
 	Client save(Client client);
 	void delete(Client client);
 	

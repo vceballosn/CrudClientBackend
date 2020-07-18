@@ -8,7 +8,9 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -37,4 +39,22 @@ public Client add (@RequestBody Client client)	{
 	return clientServices.add(client);
 }
 
+@GetMapping (path = {"/{id}"} )
+public Client listId(@PathVariable("id") int id) {
+
+  return clientServices.getIdClient(id);
 }
+
+@PutMapping(path = {"/{id}"})
+
+public Client edit (@RequestBody Client c,@PathVariable("id") int id) {
+	
+	c.setId(id);
+	return clientServices.edit(c);
+}	
+	
+	
+	
+}
+
+

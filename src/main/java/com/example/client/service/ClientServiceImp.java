@@ -22,7 +22,7 @@ public class ClientServiceImp implements ClientServices  {
 	@Override
 	public Client getIdClient(int id) {
 		// TODO Auto-generated method stub
-		return null;
+		return repository.findById(id);
 	}
 
 	@Override
@@ -34,7 +34,7 @@ public class ClientServiceImp implements ClientServices  {
 	@Override
 	public Client edit(Client client) {
 		// TODO Auto-generated method stub
-		return null;
+		return repository.save(client);
 	}
 
 	@Override
