@@ -40,7 +40,10 @@ public class ClientServiceImp implements ClientServices  {
 	@Override
 	public Client delete(int id) {
 		// TODO Auto-generated method stub
-		return null;
+		Client c = repository.findById(id);
+		  if(c != null )
+		     repository.delete(c);
+	return c;
 	}
 
 }
