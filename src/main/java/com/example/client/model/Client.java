@@ -28,6 +28,9 @@ public class Client implements Serializable {
 	private String apellido;
 	@Column
 	private String email;
+	@Column 
+	private String codigo_genero;
+	
 	
 	
 	
@@ -55,5 +58,12 @@ public class Client implements Serializable {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	public String getCodigoGenero() {
+		return codigo_genero;
+	}
+	public void setCodigoGenero(String codigoGenero) {
+		this.codigo_genero = codigoGenero;
+	}
+	
 		
 }
